@@ -36,3 +36,4 @@ sysinfo.txt
 *.unitypackage
 
 /unitytest/New Unity Project (2)/ProjectSettings
+ProjectSettings/
