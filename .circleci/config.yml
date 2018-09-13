@@ -13,8 +13,8 @@ jobs:
           name: Print the Current Time
           command: date
 	- run:
-	- chmod a+x ./Scripts/install.sh
-	- chmod a+x ./Scripts/build.sh
+	- command: chmod a+x ./Scripts/install.sh
+	- command: chmod a+x ./Scripts/build.sh
 	install : 
 	-./Scripts/install.sh
 
