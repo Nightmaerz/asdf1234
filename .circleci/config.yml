@@ -5,8 +5,8 @@ jobs:
     docker:
       - image: debian:stretch
     steps:
-      - checkout
-- chmod a+x ./Scripts/install.sh
+      	- checkout
+	- chmod a+x ./Scripts/install.sh
 	- chmod a+x ./Scripts/build.sh
 	-./Scripts/install.sh
 	- ./Scripts/build.sh
