@@ -2,17 +2,11 @@ version: 2
 
 jobs:
   build:
-    docker:
-      - image: debian:stretch
+     
+macos:
+      xcode: "9.0"
+      
     steps:
-      - checkout
-      - chmod a+x ./Scripts/install.sh
-      - chmod a+x ./Scripts/build.sh
-      -./Scripts/install.sh
-      - ./Scripts/build.sh
-      - run:
-          name: Greeting
-          command: echo Hello, world.
-      - run:
-          name: Print the Current Time
-          command: date
+      - run: xcodebuild -version
+      - run: ./Scripts/install.sh
+      - run: ./Scripts/build.sh
