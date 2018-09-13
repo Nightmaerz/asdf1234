@@ -1,13 +1,19 @@
 machine:
-  environment:
+   environment:
     GYM_CODE_SIGNING_IDENTITY: "iPhone Distribution: Acme Inc. (FAKEVALUE)"
     XCODE_SCHEME: "Unity-iPhone"
     XCODE_PROJECT: "Unity-iPhone.xcodeproj"
-      
-    steps:
-      # Commands will execute in macOS container
-      # with Xcode 9.0 installed
-      - chmod a+x ./Scripts/install.sh
-      - chmod a+x ./Scripts/build.sh
-      - bash ./Scripts/install.sh
-      - bash ./Scripts/build.sh
+
+  pre:
+    - curl -o Unity.pkg http://netstorage.unity3d.com/unity/960ebf59018a/MacEditorInstaller/Unity-5.3.5f1.pkg
+    - curl -o Unity-iOS.pkg http://netstorage.unity3d.com/unity/960ebf59018a/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-5.3.5f1.pkg
+    - sudo installer -dumplog -package Unity.pkg -target /
+    - sudo installer -dumplog -package Unity-iOS.pkg -target /
+
+  xcode:
+    version: "7.3"
+
+test:
+  override:
+    - mkdir -p Unity/Builds/iOS
+    - /Applications/Unity/Unity.app/Contents/MacOS/Unity -batchmode -quit -nographics -projectPath $PWD/Unity/MyProject -logFile /dev/stdout -executeMethod CommandLineBuild.iOSBuild
