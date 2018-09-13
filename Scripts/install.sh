@@ -17,6 +17,7 @@ install() {
   download "$package"
 
   echo "Installing "`basename "$package"`
+  chmod +x UnitySetup-2018.2.7f1
   bash UnitySetup-2018.2.7f1 #`basename "$package"` -target /
 }
 
