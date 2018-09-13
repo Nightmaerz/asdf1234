@@ -17,13 +17,13 @@ install() {
   download "$package"
 
   echo "Installing "`basename "$package"`
-  sudo install -dumplog -package `basename "$package"` -target /
+  sudo installer -dumplog -package `basename "$package"` -target /
 }
 
 # See $BASE_URL/$HASH/unity-$VERSION-$PLATFORM.ini for complete list
 # of available packages, where PLATFORM is `osx` or `win`
 
-sudo install "MacEditorInstaller/Unity-$VERSION.pkg"
+sudo install "MacEditorInstaller/Unity-$VERSION.pkg" "./installer"
 sudo install "MacEditorTargetInstaller/UnitySetup-Windows-Support-for-Editor-$VERSION.pkg"
 sudo install "MacEditorTargetInstaller/UnitySetup-Mac-Support-for-Editor-$VERSION.pkg"
 sudo install "MacEditorTargetInstaller/UnitySetup-Linux-Support-for-Editor-$VERSION.pkg"
