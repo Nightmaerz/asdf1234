@@ -1,12 +1,5 @@
 version: 2
-before_install:
-- chmod a+x ./Scripts/install.sh
-- chmod a+x ./Scripts/build.sh
-install : 
--./Scripts/install.sh
 
-script:
-- ./Scripts/build.sh
 jobs:
   build:
     docker:
@@ -19,3 +12,11 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+	- before_install:
+	- chmod a+x ./Scripts/install.sh
+	- chmod a+x ./Scripts/build.sh
+	install : 
+	-./Scripts/install.sh
+
+	script:
+	- ./Scripts/build.sh
