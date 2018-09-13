@@ -4,5 +4,7 @@ jobs:
       
     steps:
     - checkout
+    - chmod a+x ./Scripts/install.sh
+    - chmod a+x ./Scripts/build.sh
     - run: ./Scripts/install.sh
     - run: ./Scripts/build.sh 
