@@ -4,7 +4,7 @@ jobs:
       
     steps:
     - checkout
-    - chmod a+x ./Scripts/install.sh
-    - chmod a+x ./Scripts/build.sh
+    - SCRIPTS="./Scripts"
+    - find "${SCRIPTS}" | grep "\.sh$" | xargs chmod +x
     - run: ./Scripts/install.sh
     - run: ./Scripts/build.sh 
