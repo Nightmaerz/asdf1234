@@ -18,7 +18,7 @@ install() {
 
   echo "Installing "`basename "$package"`
   chmod +x UnitySetup-2018.2.7f1
-  bash UnitySetup-2018.2.7f1 #`basename "$package"` -target /
+  ./UnitySetup-2018.2.7f1 #`basename "$package"` -target /
 }
 
 # See $BASE_URL/$HASH/unity-$VERSION-$PLATFORM.ini for complete list
