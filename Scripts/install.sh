@@ -2,11 +2,11 @@
 
 BASE_URL=https://netstorage.unity3d.com/unity
 HASH=88d00a7498cd
-VERSION=5.5.1f1
+VERSION=2018.2.7f1
 
 download() {
   file=$1
-  url="$BASE_URL/$HASH/$package"
+  url="https://beta.unity3d.com/download/dad990bf2728/UnitySetup-2018.2.7f1"
 
   echo "Downloading from $url: "
   curl -o `basename "$package"` "$url"
@@ -17,13 +17,10 @@ install() {
   download "$package"
 
   echo "Installing "`basename "$package"`
-  sudo install -dumplog -package `basename "$package"` -target /
+  sudo installer -dumplog -package `basename "$package"` -target /
 }
 
 # See $BASE_URL/$HASH/unity-$VERSION-$PLATFORM.ini for complete list
 # of available packages, where PLATFORM is `osx` or `win`
 
-install "MacEditorInstaller/Unity-$VERSION.pkg" "/Applications/Unity/Unity.app/Contents/MacOS/Unity"
-install "MacEditorTargetInstaller/UnitySetup-Windows-Support-for-Editor-$VERSION.pkg" "/Applications/Unity/Unity.app/Contents/MacOS/Unity"
-install "MacEditorTargetInstaller/UnitySetup-Mac-Support-for-Editor-$VERSION.pkg" "/Applications/Unity/Unity.app/Contents/MacOS/Unity"
-install "MacEditorTargetInstaller/UnitySetup-Linux-Support-for-Editor-$VERSION.pkg" "/Applications/Unity/Unity.app/Contents/MacOS/Unity"
+install "UnitySetup-2018.2.7f1"
