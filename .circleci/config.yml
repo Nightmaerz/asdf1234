@@ -3,6 +3,6 @@ jobs:
     machine: true
       
     steps:
-    - checkout    - 
+    - checkout
     - bash ./Scripts/install.sh
     - bash ./Scripts/build.sh 
