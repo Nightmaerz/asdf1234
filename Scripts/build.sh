@@ -1,6 +1,6 @@
 #! /bin/sh
 
-project="asdf1234"
+project="<asdf1324>"
 
 echo "Attempting to build $project for Windows"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity 
