@@ -3,8 +3,6 @@ jobs:
     machine: true
       
     steps:
-    - checkout
-    - SCRIPTS="./Scripts"
-    - find "${SCRIPTS}" | grep "\.sh$" | xargs chmod +x
-    - run: ./Scripts/install.sh
-    - run: ./Scripts/build.sh 
+    - checkout    - 
+    - bash ./Scripts/install.sh
+    - bash ./Scripts/build.sh 
