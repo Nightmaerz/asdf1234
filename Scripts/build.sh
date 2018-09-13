@@ -12,15 +12,15 @@ echo "Attempting to build $project for Windows"
   -buildWindowsPlayer "$(pwd)/asdf/Build/windows/$project.exe" \
   -quit
 
-echo "Attempting to build $project for OS X"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
-  -batchmode \
-  -nographics \
-  -silent-crashes \
-  -logFile $(pwd)/unity.log \
-  -projectPath=$(pwd)/asdf \
-  -buildOSXUniversalPlayer "$(pwd)/asdf/Build/osx/$project.app" \
-  -quit
+#echo "Attempting to build $project for OS X"
+#/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+#  -batchmode \
+#  -nographics \
+#  -silent-crashes \
+#  -logFile $(pwd)/unity.log \
+#  -projectPath=$(pwd)/asdf \
+#  -buildOSXUniversalPlayer "$(pwd)/asdf/Build/osx/$project.app" \
+#  -quit
 
 #echo "Attempting to build $project for Linux"
 #/Applications/Unity/Unity.app/Contents/MacOS/Unity \
