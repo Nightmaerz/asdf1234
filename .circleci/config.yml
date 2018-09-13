@@ -4,6 +4,11 @@ jobs:
       
     steps:
     - checkout
+    - run:
+          name: Check Scripts
+          command: |
+            find . -type f -name '*.sh' | wc -l
+            find . -type f -name '*.sh' | xargs shellcheck --external-sources
     - run: chmod a+x ./Scripts/install.sh
     - run: chmod a+x ./Scripts/build.sh
     - run: ./Scripts/install.sh

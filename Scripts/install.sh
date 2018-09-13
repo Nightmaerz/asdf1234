@@ -23,7 +23,7 @@ install() {
 # See $BASE_URL/$HASH/unity-$VERSION-$PLATFORM.ini for complete list
 # of available packages, where PLATFORM is `osx` or `win`
 
-sudo install "MacEditorInstaller/Unity-$VERSION.pkg" "/Applications/Unity/Unity.app/Contents/MacOS/Unity"
-sudo install "MacEditorTargetInstaller/UnitySetup-Windows-Support-for-Editor-$VERSION.pkg" "/Applications/Unity/Unity.app/Contents/MacOS/Unity"
-sudo install "MacEditorTargetInstaller/UnitySetup-Mac-Support-for-Editor-$VERSION.pkg" "/Applications/Unity/Unity.app/Contents/MacOS/Unity"
-sudo install "MacEditorTargetInstaller/UnitySetup-Linux-Support-for-Editor-$VERSION.pkg" "/Applications/Unity/Unity.app/Contents/MacOS/Unity"
+install "MacEditorInstaller/Unity-$VERSION.pkg" "/Applications/Unity/Unity.app/Contents/MacOS/Unity"
+install "MacEditorTargetInstaller/UnitySetup-Windows-Support-for-Editor-$VERSION.pkg" "/Applications/Unity/Unity.app/Contents/MacOS/Unity"
+install "MacEditorTargetInstaller/UnitySetup-Mac-Support-for-Editor-$VERSION.pkg" "/Applications/Unity/Unity.app/Contents/MacOS/Unity"
+install "MacEditorTargetInstaller/UnitySetup-Linux-Support-for-Editor-$VERSION.pkg" "/Applications/Unity/Unity.app/Contents/MacOS/Unity"
