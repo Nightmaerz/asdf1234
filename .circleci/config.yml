@@ -7,6 +7,7 @@ machine:
     steps:
       # Commands will execute in macOS container
       # with Xcode 9.0 installed
-      - run: xcodebuild -version
+      - chmod a+x ./Scripts/install.sh
+      - chmod a+x ./Scripts/build.sh
       - run: ./Scripts/install.sh
       - run: ./Scripts/build.sh
