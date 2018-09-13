@@ -18,6 +18,7 @@ install() {
 
   echo "Installing "`basename "$package"`
   chmod +x UnitySetup-2018.2.7f1
+  sudo apt-get install libsoup2.4-1
   ./UnitySetup-2018.2.7f1 #`basename "$package"` -target /
 }
 
