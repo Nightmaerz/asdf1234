@@ -4,7 +4,7 @@ machine:
     XCODE_SCHEME: "Unity-iPhone"
     XCODE_PROJECT: "Unity-iPhone.xcodeproj"
 
-  pre:
+  steps:
     - curl -o Unity.pkg http://netstorage.unity3d.com/unity/960ebf59018a/MacEditorInstaller/Unity-5.3.5f1.pkg
     - curl -o Unity-iOS.pkg http://netstorage.unity3d.com/unity/960ebf59018a/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-5.3.5f1.pkg
     - sudo installer -dumplog -package Unity.pkg -target /
