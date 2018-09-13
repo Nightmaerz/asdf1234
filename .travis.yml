@@ -1,5 +1,6 @@
 anguage: objective-c
 osx_image: xcode8.1
+sudo: required
 rvm:
 - 2.2
 before_install:
