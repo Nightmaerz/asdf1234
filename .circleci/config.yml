@@ -1,7 +1,8 @@
-jobs:
-  build:
-    macos:
-      xcode: "9.0"
+machine:
+  environment:
+    GYM_CODE_SIGNING_IDENTITY: "iPhone Distribution: Acme Inc. (FAKEVALUE)"
+    XCODE_SCHEME: "Unity-iPhone"
+    XCODE_PROJECT: "Unity-iPhone.xcodeproj"
       
     steps:
       # Commands will execute in macOS container
