@@ -1,4 +1,3 @@
-version: 2
 jobs:
   build:
     machine: true
@@ -9,8 +8,8 @@ jobs:
     - sudo installer -dumplog -package Unity.pkg -target /
     - sudo installer -dumplog -package Unity-iOS.pkg -target /
 
-  xcode:
-    version: "7.3"
+    xcode:
+      version: "7.3"
 
 test:
   override:
