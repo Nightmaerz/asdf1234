@@ -6,17 +6,13 @@ jobs:
       - image: debian:stretch
     steps:
       - checkout
+- chmod a+x ./Scripts/install.sh
+	- chmod a+x ./Scripts/build.sh
+	-./Scripts/install.sh
+	- ./Scripts/build.sh
       - run:
           name: Greeting
           command: echo Hello, world.
       - run:
           name: Print the Current Time
           command: date
-	- run:
-	- command: chmod a+x ./Scripts/install.sh
-	- command: chmod a+x ./Scripts/build.sh
-	install : 
-	-./Scripts/install.sh
-
-	script:
-	- ./Scripts/build.sh
