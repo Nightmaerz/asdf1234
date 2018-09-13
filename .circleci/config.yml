@@ -3,15 +3,6 @@ jobs:
     machine: true
       
     steps:
+    - checkout
     - run: ./Scripts/install.sh
-    - curl -o Unity-iOS.pkg http://netstorage.unity3d.com/unity/960ebf59018a/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-5.3.5f1.pkg
-    - sudo installer -dumplog -package Unity.pkg -target /
-    - sudo installer -dumplog -package Unity-iOS.pkg -target /
-
-    xcode:
-      version: "7.3"
-
-test:
-  override:
-    - mkdir -p Unity/Builds/iOS
-    - /Applications/Unity/Unity.app/Contents/MacOS/Unity -batchmode -quit -nographics -projectPath $PWD/Unity/MyProject -logFile /dev/stdout -executeMethod CommandLineBuild.iOSBuild
+    - run: ./Scripts/build.sh 
