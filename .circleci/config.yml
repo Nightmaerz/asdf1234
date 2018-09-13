@@ -12,7 +12,7 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
-	- before_install:
+	- run:
 	- chmod a+x ./Scripts/install.sh
 	- chmod a+x ./Scripts/build.sh
 	install : 
