@@ -8,8 +8,8 @@ echo "Attempting to build $project for Windows"
   -nographics \
   -silent-crashes \
   -logFile $(pwd)/unity.log \
-  -projectPath $(pwd) \
-  -buildWindowsPlayer "$(pwd)/Build/windows/$project.exe" \
+  -projectPath $(pwd)/asdf \
+  -buildWindowsPlayer "$(pwd)/asdf/Build/windows/$project.exe" \
   -quit
 
 echo "Attempting to build $project for OS X"
@@ -18,8 +18,8 @@ echo "Attempting to build $project for OS X"
   -nographics \
   -silent-crashes \
   -logFile $(pwd)/unity.log \
-  -projectPath $(pwd) \
-  -buildOSXUniversalPlayer "$(pwd)/Build/osx/$project.app" \
+  -projectPath $(pwd)/asdf \
+  -buildOSXUniversalPlayer "$(pwd)/asdf/Build/osx/$project.app" \
   -quit
 
 echo "Attempting to build $project for Linux"
@@ -28,8 +28,8 @@ echo "Attempting to build $project for Linux"
   -nographics \
   -silent-crashes \
   -logFile $(pwd)/unity.log \
-  -projectPath $(pwd) \
-  -buildLinuxUniversalPlayer "$(pwd)/Build/linux/$project.exe" \
+  -projectPath $(pwd)/asdf \
+  -buildLinuxUniversalPlayer "$(pwd)/asdf/Build/linux/$project.exe" \
   -quit
 
 echo 'Logs from build'
@@ -37,6 +37,6 @@ cat $(pwd)/unity.log
 
 
 echo 'Attempting to zip builds'
-zip -r $(pwd)/Build/linux.zip $(pwd)/Build/linux/
-zip -r $(pwd)/Build/mac.zip $(pwd)/Build/osx/
-zip -r $(pwd)/Build/windows.zip $(pwd)/Build/windows/
+zip -r $(pwd)/Build/linux.zip $(pwd)/asdf/Build/linux/
+zip -r $(pwd)/Build/mac.zip $(pwd)/asdf/Build/osx/
+zip -r $(pwd)/Build/windows.zip $(pwd)/asdf/Build/windows/
