@@ -37,7 +37,7 @@ cat $(pwd)/unity.log
 
 
 echo 'Attempting to zip builds'
-echo pwd
+echo $(pwd)
 zip -r $(pwd)/asdf/Build/linux.zip $(pwd)/asdf/Build/linux/
 zip -r $(pwd)/asdf/Build/mac.zip $(pwd)/asdf/Build/osx/
 zip -r $(pwd)/asdf/Build/windows.zip $(pwd)/asdf/Build/windows/
