@@ -3,7 +3,7 @@
 project="<asdf1324>"
 
 echo "Attempting to build $project for Windows"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+locate Unity \
   -batchmode \
   -nographics \
   -silent-crashes \
