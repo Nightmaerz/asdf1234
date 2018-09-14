@@ -11,7 +11,7 @@ echo "Attempting to build $project for Windows"
   -projectPath=$(pwd) \
    echo "set project path"\
   -buildWindowsPlayer "$(pwd)/Build/windows/$project.exe" \
-   echo "building windowsplayer"
+   echo "building windowsplayer"\
   -quit
 
 #echo "Attempting to build $project for OS X"
