@@ -3,7 +3,7 @@
 project="<asdf1324>"
 
 echo "Attempting to build $project for Windows"
-$(pwd)/unity-editor/unity \
+$(pwd)/Unity/editor/Unity \
   -batchmode \
   -nographics \
   -silent-crashes \
