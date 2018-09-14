@@ -9,6 +9,7 @@ download() {
   url="$BASE_URL/$HASH/$package"
 
   echo "Downloading from $url: "
+  cd $(pwd)
   curl -o `basename "$package"` "$url" -target $(pwd)
 }
 
