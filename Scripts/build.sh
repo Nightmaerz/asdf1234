@@ -10,7 +10,7 @@ echo "Attempting to build $project for Windows"
   -logFile $(pwd)/unity.log \
   -projectPath="$(pwd)/asdf1234" \
    echo "set project path"\
-  -buildPlayerOtions.scenes="/asdf1234/scene1.unity"
+  -buildPlayerOtions.scenes="/asdf1234/scene1.unity"\
   -buildWindowsPlayer "$(pwd)/Build/windows/$project.exe" \
    echo "building windowsplayer"\
   -quit
