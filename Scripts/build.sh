@@ -8,8 +8,10 @@ echo "Attempting to build $project for Windows"
   -nographics \
   -silent-crashes \
   -logFile $(pwd)/unity.log \
-  -projectPath $(pwd) \
+  -projectPath = $(pwd) \
+   echo "set project path"\
   -buildWindowsPlayer "$(pwd)/Build/windows/$project.exe" \
+   echo "building windowsplayer"
   -quit
 
 #echo "Attempting to build $project for OS X"
