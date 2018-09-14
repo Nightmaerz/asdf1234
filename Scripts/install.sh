@@ -10,7 +10,7 @@ download() {
 
   echo "Downloading from $url: "
   cd $(pwd)
-  curl -o `basename "$package"` "$url" -target $(pwd)
+  curl -o `basename "$package"` "$url"
 }
 
 install() {
@@ -18,7 +18,7 @@ install() {
   download "$package"
 
   echo "Installing "`basename "$package"`
-  sudo installer -pkg `basename "$package"` -target $(pwd)
+  sudo installer -pkg `basename "$package"` -target /
 }
 
 # See $BASE_URL/$HASH/unity-$VERSION-$PLATFORM.ini for complete list
