@@ -1,8 +1,8 @@
 WindowsStandalone
 PlayerPath?
-/home/jordie/Afbeeldingen/asdf/New Unity Project.exe
+/home/jordie/Afbeeldingen/asdf/asdf1234.exe
 SceneListBegin?
-Assets/scene1.unity
+Assets/Scenes/scene1.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
