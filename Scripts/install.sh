@@ -17,7 +17,7 @@ install() {
   download "$package"
 
   echo "Installing "`basename "$package"`
-  sudo installer -pkg `basename "$package"` -target /
+  sudo installer -pkg `basename "$package"` -target $(pwd)
 }
 
 # See $BASE_URL/$HASH/unity-$VERSION-$PLATFORM.ini for complete list
