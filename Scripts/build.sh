@@ -1,16 +1,14 @@
 #! /bin/sh
 
-project="<asdf1324>"
 
-echo "Attempting to build $project for Windows"
+echo "Attempting to build asdf1234 for Windows"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -nographics \
   -silent-crashes \
   -logFile $(pwd)/unity.log \
   -projectPath="$(pwd)/asdf1234" \
-  -buildPlayerOtions.scenes="/asdf1234/scene1.unity"\
-  -buildWindowsPlayer "$(pwd)/Build/windows/$project.exe" \
+  -buildWindowsPlayer "Build/windows/asdf1234.exe" \
   -quit
 
 #echo "Attempting to build $project for OS X"
