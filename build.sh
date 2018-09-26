@@ -8,7 +8,7 @@ echo "Attempting to build asdf1234 for Windows"
   -silent-crashes \
   -logFile $(pwd)/unitywindows.log \
   -projectPath="$(pwd)" \
-  -buildWindowsPlayer \
+  -buildWindowsPlayer "windows/asdf.exe" \
   -quit
 
 #echo "Attempting to build $project for OS X"
