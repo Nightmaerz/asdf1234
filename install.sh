@@ -1,8 +1,9 @@
 #! /bin/sh
 
+New_URL=https://download.unity3d.com/download_unity/3071d1717b71/MacEditorInstaller/Unity-2018.2.5f1.pkg
 BASE_URL=https://netstorage.unity3d.com/unity
-HASH=88d00a7498cd
-VERSION=5.5.1f1
+HASH=3071d1717b71
+VERSION=2018.2.5f1
 
 download() {
   file=$1
