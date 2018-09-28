@@ -1,5 +1,6 @@
 #! /bin/sh
 
+mkdir "$(pwd)/Zorgplezier"
 
 echo "Attempting to build asdf1234 for Windows"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
@@ -7,7 +8,7 @@ echo "Attempting to build asdf1234 for Windows"
   -nographics \
   -silent-crashes \
   -logFile $(pwd)/unitywindows.log \
-  -projectPath="$(pwd)" \
+  -projectPath="$(pwd)/Zorgplezier" \
   -buildWindowsPlayer "windows/asdf.exe" \
   -quit
 
@@ -27,7 +28,7 @@ echo "Attempting to build asdf1234 for Linux"
   -nographics \
   -silent-crashes \
   -logFile $(pwd)/unitylinux.log \
-  -projectPath="$(pwd)" \
+  -projectPath="$(pwd)/Zorgplezier" \
   -buildLinuxUniversalPlayer "linux/$project.exe" \
   -quit
 
