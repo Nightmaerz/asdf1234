@@ -29,7 +29,7 @@ echo "Attempting to build asdf1234 for Linux"
   -silent-crashes \
   -logFile $(pwd)/unitylinux.log \
   -projectPath="$(pwd)/Zorgplezier" \
-  -buildLinuxUniversalPlayer "linux/$project.exe" \
+  -buildLinuxUniversalPlayer "linux/asdf.exe" \
   -quit
 
 echo 'Logs from build'
